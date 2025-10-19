@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void main() {
-  List<Map<dynamic, dynamic>> dialogues = [
+  List<Map<String, dynamic>> dialogues = [
     {
       "string": "Witaj w prostej, konsolowej aplikacji do tworzenia prostych symulacji tekstu typu tych w grach Visual Novel",
       "speed": 45,
@@ -82,7 +82,7 @@ void typing(List<Map<dynamic,dynamic>> listmap, int n) {
   }
 }
 
-void choiceTyping(Map<dynamic, dynamic> dgue, List<String> pickable, int pick) { // dialogue to mapa w liscie, wiec map. pickables ma w sobie liste ([]), wiec lista. no i pick jako int
+void choiceTyping(Map<String, dynamic> dgue, List<String> pickable, int pick) { // dialogue to mapa w liscie, wiec map. pickables ma w sobie liste ([]), wiec lista. no i pick jako int
   String response = pickable[pick - 1];
   for (var i = 0; i < response.length; i++) {
     stdout.write(response[i]);
